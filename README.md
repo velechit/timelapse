@@ -22,7 +22,7 @@ This project demonstrates using linker scripts to place code bases at specific l
 ![Component Side](board/documentation/3d/timelapse-comp.png?raw=true)
 *3D Model of component side of the board*
 
-Full documentation can be found [here](board/documentation/index.html)
+Full documentation can be found [here](https://htmlpreview.github.io/?https://github.com/velechit/timelapse/board/documentation/index.html)
 
 
 PCB is designed using 
