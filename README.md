@@ -14,6 +14,53 @@ This project demonstrates using linker scripts to place code bases at specific l
 * Bootloader also implements a minimalistic SSD1306 driver. As the bootloader space in ATMEGA8 is limited to 2k (start address `0x1800`), the driver is placed at `0x1600` which can be accessed through absolute addressing
 * The application program (the actual timelapse code) makes use of this SSD1306 driver through absolute addressing
 
+## Toolchain needed
+The bootloader and firmware are developed using barebone `avr-gcc` and `avr-libc`
+
+Install `avr-gcc` and `avr-libc`. Under Windows you may chose to use [WinAVR](http://winavr.sourceforge.net/).
+
+Under linux (`Ubuntu` epsecially)
+> `sudo apt install gcc-avr avr-libc`
+
+You will also need gmake (generally part of the installation). If not, install using
+> `sudo apt install make`
+
+Compile using `make`
+
+### Fuse Settings
+The board is designed with external oscillator module. Hence the below fuse settings are used for `Atmega8`
+
+```
+lfuse: 1 1 0 0 0 0 0 0 = 0xC0
+       | | | | | | | |
+       | | | | | | | +- CKSEL0   - External Clock
+       | | | | | | +--- CKSEL1
+       | | | | | +----- CKSEL2
+       | | | | +------- CKSEL3
+       | | | +--------- SUT0     - Startup Time 0ms
+       | | +----------- SUT1
+       | +------------- BODEN    - Brown-out detection disabled
+       +--------------- BODLEVEL - Brown-out detection level (N/A)
+
+
+lfuse: 1 1 0 0 1 0 0 0 = 0xC8
+       | | | | | | | |
+       | | | | | | | +- BOOTRST  - Reset boots to boot loader
+       | | | | | | +--- BOOTSZ0  - Boot section size 2k
+       | | | | | +----- BOOTSZ1
+       | | | | +------- EESAVE   - No EEPROM save on program
+       | | | +--------- CKOPT    - Full Swing Clock
+       | | +----------- SPIEN    - Serial programming enabled
+       | +------------- WTDON    - Watchdog Timer disabled
+       +--------------- RSTDISBL - Reset not disabled
+```
+Program the above fuses using:
+
+> `avrdude -p atmega8 -P usb -c usbasp -U lfuse:w:0xC0:m -U hfuse:w:0xC8:m`
+
+## Uploading the bootloader
+The bootloader and the fuse settings have to be uploaded using any other method of loading (Using Arduino as ISP or USBAsp programmer). Once programmed, then the controller can be soldered to the application board and the programmed bootloader be used to upload the main firmware.
+
 ## TODO List
 
 - [x] Bootloader
