@@ -22,13 +22,13 @@ This project demonstrates using linker scripts to place code bases at specific l
 ![Component Side](board/documentation/3d/timelapse-comp.png?raw=true)
 *3D Model of component side of the board*
 
-Full documentation can be found [here](board/documentation/index.html)
+Full documentation can be found [here](board/documentation/index.html?raw=true)
 
 
 PCB is designed using 
 
 [![](https://www.kicad.org/img/kicad_logo_small.png)](https://www.kicad.org)
 
-Download KiCad project files [here](board/timelapse.zip)
+Download KiCad project files [here](board/timelapse.zip?raw=true)
 
-Schematic can be found [here](board/schematic.pdf)
+Schematic can be found [here](board/schematic.pdf?raw=true)
