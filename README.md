@@ -14,6 +14,16 @@ This project demonstrates using linker scripts to place code bases at specific l
 * Bootloader also implements a minimalistic SSD1306 driver. As the bootloader space in ATMEGA8 is limited to 2k (start address `0x1800`), the driver is placed at `0x1600` which can be accessed through absolute addressing
 * The application program (the actual timelapse code) makes use of this SSD1306 driver through absolute addressing
 
+## TODO List
+
+- [x] Bootloader
+- [x] SSD1306 Driver
+- [x] Integrate SSD1306 Driver with bootloader, and display a USB icon when in boot load mode
+- [x] Update Makefile for bootloader to generate liner script for display driver entry points to be accessed by application program
+- [x] Design the PCB
+- [ ] Get PCB Fabricated
+- [ ] Write the main application program
+
 
 ## 3D models
 ![Component Side](board/documentation/3d/timelapse-disp.png?raw=true)
