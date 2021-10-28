@@ -59,7 +59,7 @@ Program the above fuses using:
 > `avrdude -p atmega8 -P usb -c usbasp -U lfuse:w:0xC0:m -U hfuse:w:0xC8:m`
 
 ## Uploading the bootloader
-The bootloader and the fuse settings have to be uploaded using any other method of loading (Using Arduino as ISP or USBAsp programmer). Once programmed, then the controller can be soldered to the application board and the programmed bootloader be used to upload the main firmware.
+The bootloader and the fuse settings have to be uploaded using any other method of loading (Using Arduino as ISP or USBAsp programmer). Once programmed, the controller can be soldered to the application board and the programmed bootloader be used to upload the main firmware.
 
 ## TODO List
 
