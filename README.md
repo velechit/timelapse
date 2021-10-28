@@ -43,7 +43,7 @@ lfuse: 1 1 0 0 0 0 0 0 = 0xC0
        +--------------- BODLEVEL - Brown-out detection level (N/A)
 
 
-lfuse: 1 1 0 0 1 0 0 0 = 0xC8
+hfuse: 1 1 0 0 1 0 0 0 = 0xC8
        | | | | | | | |
        | | | | | | | +- BOOTRST  - Reset boots to boot loader
        | | | | | | +--- BOOTSZ0  - Boot section size 2k
