@@ -1,9 +1,0 @@
-make all --dry-run --keep-going --print-directory
-make: Entering directory '/media/vault-1tb/Vishwa/Projects/Linux/AVR/OLED_Drv'
- 
-make: Nothing to be done for 'all'.
-make: Leaving directory '/media/vault-1tb/Vishwa/Projects/Linux/AVR/OLED_Drv'
- 
-make: Warning: File 'Makefile' has modification time 34 s in the future
-make: warning:  Clock skew detected.  Your build may be incomplete.
- 
