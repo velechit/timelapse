@@ -27,7 +27,7 @@ Full documentation can be found [here](board/documentation/index.html)
 
 PCB is designed using 
 
-[![](https://www.kicad.org/img/kicad_logo_small.png)](ttps://www.kicad.org)
+[![](https://www.kicad.org/img/kicad_logo_small.png)](https://www.kicad.org)
 
 Download KiCad project files [here](board/timelapse.zip)
 
