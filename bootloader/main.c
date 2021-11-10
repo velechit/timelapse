@@ -767,6 +767,9 @@ static void initForUsbConnectivity(void)
 
 int __attribute__((__noreturn__)) main(void)
 {
+  DDRB |= _BV(0);
+  PORTB |= _BV(0);
+
   SSD1306_Init();
   SSD1306_Clear();
 

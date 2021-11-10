@@ -13,6 +13,22 @@ This project contains Circuit Schematic, PCB Layout, bootloader (Customized), Ma
 This project demonstrates using linker scripts to place code bases at specific location and re-using them across different codes
 * Bootloader also implements a minimalistic SSD1306 driver. As the bootloader space in ATMEGA8 is limited to 2k (start address `0x1800`), the driver is placed at `0x1600` which can be accessed through absolute addressing
 * The application program (the actual timelapse code) makes use of this SSD1306 driver through absolute addressing
+## Progress so far
+
+- [x] Bootloader
+- [x] SSD1306 Driver
+- [x] Integrate SSD1306 Driver with bootloader, and display a USB icon when in boot load mode
+- [x] Update Makefile for bootloader to generate liner script for display driver entry points to be accessed by application program
+- [x] Design the PCB
+- [ ] Get PCB Fabricated
+- [ ] Write the main application program
+
+<br/>
+
+ _I thought of fabricating the board myself. Due to insufficient time, I have ordered from online fab. I had two options for shipment either too expencive and fast delivery or too slow with easy on pockets. I have chosen the latter, waiting for the board to arrive_
+
+**IMPORTANT Update : I found a issue with the power on circuitory that the internal IO driver transistor is too leakey and is permanently turning on the PMOS power gate. Hence I have added additional NMOS (`2n7002`) to ground externally**
+
 
 ## Toolchain needed
 The bootloader and firmware are developed using barebone `avr-gcc` and `avr-libc`
@@ -60,17 +76,6 @@ Program the above fuses using:
 
 ## Uploading the bootloader
 The bootloader and the fuse settings have to be uploaded using any other method of loading (Using Arduino as ISP or USBAsp programmer). Once programmed, the controller can be soldered to the application board and the programmed bootloader be used to upload the main firmware.
-
-## TODO List
-
-- [x] Bootloader
-- [x] SSD1306 Driver
-- [x] Integrate SSD1306 Driver with bootloader, and display a USB icon when in boot load mode
-- [x] Update Makefile for bootloader to generate liner script for display driver entry points to be accessed by application program
-- [x] Design the PCB
-- [ ] Get PCB Fabricated
-- [ ] Write the main application program
-
 
 ## 3D models
 ![Component Side](board/documentation/3d/timelapse-disp.png?raw=true)

@@ -11,10 +11,10 @@
 <body>
     <div class="container mx-auto px-3">
         <div class="w-full my-3 text-sm text-right bg-gray-200 px-3 py-1">
-            Last update: 28. 10. 2021 14:20
+            Last update: 10. 11. 2021 22:09
                 (git revision
                     
-                    aa3476a
+                    68d486e
                     )
         </div>
 
@@ -22,25 +22,27 @@
 
 <p>Photography Timer based on Atmega8 controller,  OLED display and button controls.</p>
 
-<h2>Specialities:</h2>
+<h2>3D models</h2>
 
-<ul>
-<li>USB Based boot loader (based on <a href="https://github.com/baerwolf/USBaspLoader">baerwolf</a>'s code)</li>
-<li>Minimalsitic SSD1306 driver</li>
-<li>SoftSwitch power on</li>
-</ul>
+<p><img src="3d/timelapse-disp.png?raw=true" alt="Component Side" />
+<center><em>3D Model of display side of the board</em></center></p>
+<br/>
 
-<p>This project contains Circuit Schematic, PCB Layout, bootloader (Customized), Main Application</p>
+<p><img src="3d/timelapse-comp.png?raw=true" alt="Component Side" />
+<center><em>3D Model of component side of the board</em></center></p>
 
-<p>This project demonstrates using linker scripts to place code bases at specific location and re-using them across different codes
-* Bootloader also implements a minimalistic SSD1306 driver, but as the bootloader space in ATMEGA8 is limited to 2k (start address <code>0x1800</code>), the driver is placed at <code>0x1600</code> which can be accessed through absolute addressing
-* The application program (the actual timelapse code) makes use of this SSD1306 driver through absolute addressing</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>Full documentation can be found <a href="https://raw.githack.com/velechit/timelapse/main/board/documentation/index.html">here</a></p>
 
-<p><img src="3d/timelapse-comp.png?raw=true" alt="Board - Component Side" />
-Board - Component Side</p>
+<p>PCB is designed using<br/>
+<a href="https://www.kicad.org"><img src="https://www.kicad.org/img/kicad_logo_small.png" alt="" /></a></p>
 
-<p><img src="3d/timelapse-disp.png?raw=true" alt="Board - Display Side" />
-Board - Display Side</p>
+<p>Download KiCad project files <a href="board/timelapse.zip?raw=true">here</a></p>
+
+<p>Schematic can be found <a href="board/schematic.pdf?raw=true">here</a></p>
 
 
         <h1>Available files</h1>
@@ -59,8 +61,8 @@ Board - Display Side</p>
                     <p>Main Board</p>
                     <p>
                         <ul>
-                            <li><a href="boards/timelapse.kicad_pcb">Download source board</a></li>
-                            <li><a href="boards/timelapse-gerbers.zip">Download gerbers</a></li>
+                            <li><a href="boards/timelapse.kicad_pcb?raw=true">Download source board</a></li>
+                            <li><a href="boards/timelapse-gerbers.zip?raw=true">Download gerbers</a></li>
                         </ul>
                     </p>
                 </div>
