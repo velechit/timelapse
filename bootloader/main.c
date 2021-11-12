@@ -765,10 +765,35 @@ static void initForUsbConnectivity(void)
     sei();
 }
 
+char cnt ;
+
+ISR(TIMER0_OVF_vect){
+  cnt++;
+  if(cnt>100){
+   if((~PIND) & _BV(3)){
+    PORTB &= (~_BV(0));
+    while(1); // we power off so dont go anywhere else
+   } else {
+    cnt=0;
+    TCCR0 = 0;
+   }
+  }
+}
+
+ISR(INT1_vect){
+  TCCR0 |= _BV(CS02)|_BV(CS00); // div 1024 prescalar
+  TIMSK |= _BV(TOIE0);
+}
+
 int __attribute__((__noreturn__)) main(void)
 {
   DDRB |= _BV(0);
   PORTB |= _BV(0);
+  MCUCR |= _BV(ISC11)|_BV(ISC10); // INT1 on rising edge
+  GICR |= _BV(INT1);  // enable interrupt
+  sei();
+  // enable the INT1 to trigger on high
+  cnt=0;
 
   SSD1306_Init();
   SSD1306_Clear();
