@@ -25,7 +25,9 @@ This project demonstrates using linker scripts to place code bases at specific l
 
 <br/>
 
-**UPDATE: Added power off code in bootloader**
+**UPDATE 1: Added power off code in bootloader**
+
+**UPDATE 2: Initial dummy firmware implemented which is simple counter**
 
 <br/>
 
