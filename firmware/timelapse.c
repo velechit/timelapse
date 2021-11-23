@@ -2,6 +2,7 @@
 #include <util/delay.h>
 #include <avr/pgmspace.h>
 #include <avr/interrupt.h>
+#include "i2c.h"
 
 /*
 #include "SSD1306.h"
@@ -66,14 +67,16 @@ int main(void)
     SSD1306_Init(); // no need to init. it should be initialized from the boot loader
     SSD1306_Clear(); // no need to init. it should be initialized from the boot loader
     
+
     DDRD = 0b00100000;
     PORTD = 0b00100000;
 
-     MCUCR |= _BV(ISC11)|_BV(ISC10); // INT1 on rising edge
-  GICR |= _BV(INT1);  // enable interrupt
-  sei();
-  // enable the INT1 to trigger on high
-  cnt=0;
+    MCUCR |= _BV(ISC11)|_BV(ISC10); // INT1 on rising edge
+    GICR |= _BV(INT1);  // enable interrupt
+    sei();
+
+    // enable the INT1 to trigger on high
+    cnt=0;
 
     draw_time(0,0,0);
 
@@ -83,6 +86,7 @@ int main(void)
       cnt++;
       if(cnt==2) {
 	cnt=0; ss++; if(ss==60) { ss = 0; mm++; if(mm==60) { mm=0; hh++; if (hh==48) { hh = 0; }}}
+	if(mm==1) mm=0;
 	draw_time(hh,mm,ss);
       }
     }
