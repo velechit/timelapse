@@ -20,7 +20,7 @@ This project demonstrates using linker scripts to place code bases at specific l
 - [x] Integrate SSD1306 Driver with bootloader, and display a USB icon when in boot load mode
 - [x] Update Makefile for bootloader to generate liner script for display driver entry points to be accessed by application program
 - [x] Design the PCB
-- [ ] Get PCB Fabricated
+- [x] Get PCB Fabricated
 - [ ] Write the main application program
 
 <br/>
@@ -28,6 +28,8 @@ This project demonstrates using linker scripts to place code bases at specific l
 **UPDATE 1: Added power off code in bootloader**
 
 **UPDATE 2: Initial dummy firmware implemented which is simple counter**
+
+**UPDATE 3: got the fabricated PCB, assembled, and uploaded the bootloader & the dummy firmware... till now all working**
 
 <br/>
 
