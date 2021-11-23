@@ -33,7 +33,7 @@ This project demonstrates using linker scripts to place code bases at specific l
 
 <br/>
 
- _I thought of fabricating the board myself. Due to insufficient time, I have ordered from online fab. I had two options for shipment either too expencive and fast delivery or too slow with easy on pockets. I have chosen the latter, waiting for the board to arrive_
+ _I thought of fabricating the board myself. Due to insufficient time, I have ordered from online fab. I had two options for shipment either too expensive and fast delivery or too slow with easy on pockets. I have chosen the latter, waiting for the board to arrive_
 
 **IMPORTANT Update : I found a issue with the power on circuitory that the internal IO driver transistor is too leakey and is permanently turning on the PMOS power gate. Hence I have added additional NMOS (`2n7002`) to ground externally**
 
