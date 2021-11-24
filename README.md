@@ -86,10 +86,17 @@ Program the above fuses using:
 The bootloader and the fuse settings have to be uploaded using any other method of loading (Using Arduino as ISP or USBAsp programmer). Once programmed, the controller can be soldered to the application board and the programmed bootloader be used to upload the main firmware.
 
 ## 3D models
-![Component Side](board/documentation/3d/timelapse-disp.png?raw=true)
+![Board Side](board/documentation/3d/timelapse-disp.png?raw=true)
 *3D Model of display side of the board*
 
 ![Component Side](board/documentation/3d/timelapse-comp.png?raw=true)
+*3D Model of component side of the board*
+
+## Post Fabrication
+![Board Side](board/documentation/boards/front.png?raw=true)
+*3D Model of display side of the board*
+
+![Component Side](board/documentation/boards/back.png?raw=true)
 *3D Model of component side of the board*
 
 Full documentation can be found [here](https://raw.githack.com/velechit/timelapse/main/board/documentation/index.html)
