@@ -87,17 +87,21 @@ The bootloader and the fuse settings have to be uploaded using any other method 
 
 ## 3D models
 ![Board Side](board/documentation/3d/timelapse-disp.png?raw=true)
+<br/>
 *3D Model of display side of the board*
 
 ![Component Side](board/documentation/3d/timelapse-comp.png?raw=true)
+<br/>
 *3D Model of component side of the board*
 
 ## Post Fabrication
 ![Board Side](board/documentation/boards/front.png?raw=true)
-*3D Model of display side of the board*
+<br/>
+*Display side of the board*
 
 ![Component Side](board/documentation/boards/back.png?raw=true)
-*3D Model of component side of the board*
+<br/>
+*Component side of the board*
 
 Full documentation can be found [here](https://raw.githack.com/velechit/timelapse/main/board/documentation/index.html)
 
