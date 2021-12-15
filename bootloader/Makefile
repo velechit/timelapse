@@ -466,7 +466,6 @@ clean:
 	$(RM) main.elf
 	$(RM) main.o
 	$(RM) main.s
-	$(RM) linkdrv.ld
 ifeq ($(HOSTOS), Windows_NT)
 	$(RM) usbdrv\usbdrvasm.o
 	$(RM) usbdrv\oddebug.o

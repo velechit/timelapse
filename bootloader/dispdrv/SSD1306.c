@@ -60,10 +60,10 @@ void SSD1306_Init(void) {
     /* Initialization sequence for OLED SSD1306 driver IC */
     I2C_start(OLED_I2C_SLAVE_ADDRESS);    // Let the SSD1306 know we are talking to it
     I2C_write(0x80); I2C_write(0x8D);     // Enable charge pump
-       I2C_write(0x80); I2C_write(0x14);  // 
+    I2C_write(0x80); I2C_write(0x14);  // 
     I2C_write(0x80); I2C_write(0xAF);     // Turn on the display
     I2C_write(0x80); I2C_write(0x20);     // Select Horizontal addressing mode
-      I2C_write(0x80); I2C_write(0x00);     // 
+    I2C_write(0x80); I2C_write(0x00);     // 
     I2C_write(0x80); I2C_write(0x40);     // map COM0 to ROW0 of the display
     I2C_stop();                           // Once all init sequence is done, send STOP
 }
