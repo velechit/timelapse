@@ -116,3 +116,5 @@ PCB is designed using
 Download KiCad project files [here](board/timelapse.zip?raw=true)
 
 Schematic can be found [here](board/schematic.pdf?raw=true)
+
+email: elechi@gmail.com
