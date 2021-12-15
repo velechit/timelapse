@@ -5,6 +5,7 @@
 #include "power.h"
 #include "display.h"
 #include "keypad.h"
+#include "camera.h"
 
 void initSystem(void) {
    cli();
@@ -12,6 +13,7 @@ void initSystem(void) {
    initDisplay();
    _delay_ms(50);
    keypadInit();
+   initCamera();
    powerOn();
    sei();
 }

@@ -79,7 +79,7 @@ OBJDIR = .
 
 
 # List C source files here. (C dependencies are automatically generated.)
-SRC = $(TARGET).c keypad.c power.c system.c glyphs.c display.c
+SRC = $(TARGET).c keypad.c power.c system.c glyphs.c display.c camera.c
 
 
 # List C++ source files here. (C dependencies are automatically generated.)

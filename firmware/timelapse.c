@@ -3,6 +3,7 @@
 #include "keypad.h"
 #include "system.h"
 #include "glyphs.h"
+#include "camera.h"
 
 
 // TODO: Setup Timer0 for 1sec timing
@@ -43,7 +44,9 @@ void btn4Press (void){
    decTime();
    invalidateDisplay();
 }
+
 void btn2LongPress (void){
+	shutter();
 }
 void btn3LongPress (void){
 }
@@ -58,6 +61,11 @@ int main(void)
 {
     hh = 0; mm=0;ss=0;
     initSystem();
+
+    set_mode(CAM_MODE_FOCUS_SHUTTER_BULB);
+    set_focus_duration(5000);
+    set_shutter_duration(2000);
+    set_focus_shutter_latency(100);
 
     while(1){
       keypadPoll();
